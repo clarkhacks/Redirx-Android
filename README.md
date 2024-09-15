@@ -7,8 +7,8 @@ This is the Android App for the Redirx project. The app is built using React Nat
 To get started, clone the repository and run the following commands:
 
 ```bash
-# clone command here
-cd redirx-app
+git clone https://github.com/clarkhacks/Redirx-Android.git
+cd Redirx-Android
 npm install
 ```
 
