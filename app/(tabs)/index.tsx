@@ -6,7 +6,7 @@ import Toast from 'react-native-toast-message';
 import { useAdmin, AdminContextType } from '@/components/AdminContext';
 import { useRouter } from 'expo-router';
 import { Link } from 'expo-router';
-
+import { useThemeColor } from '@/hooks/useThemeColor';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { ThemedTextInput } from '@/components/ThemedInput';
@@ -93,7 +93,10 @@ export default function App() {
 				<ThemedText type='subtitle'>
 					The open source URL shortener. If you need help setting Redirx up
 					please visit the
-					<Link href='https://github.com/clarkhacks/Redirx-Android'>
+					<Link
+						href='https://github.com/clarkhacks/Redirx-Android'
+						style={styles.link}
+					>
 						Github Repo
 					</Link>
 				</ThemedText>
@@ -194,7 +197,7 @@ export default function App() {
 		</ParallaxScrollView>
 	);
 }
-
+const textColor = useThemeColor({ light: '#000', dark: '#fff' }, 'text');
 const styles = StyleSheet.create({
 	titleContainer: {
 		flexDirection: 'column',
@@ -204,6 +207,10 @@ const styles = StyleSheet.create({
 	stepContainer: {
 		gap: 8,
 		marginBottom: 8,
+	},
+	link: {
+		textDecorationLine: 'underline',
+		color: textColor,
 	},
 	reactLogo: {
 		height: '100%',
