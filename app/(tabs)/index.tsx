@@ -90,9 +90,9 @@ export default function App() {
 		>
 			<ThemedView style={styles.titleContainer}>
 				<ThemedText type='title'>Welcome to Redirx,</ThemedText>
-				<ThemedText type='subtitle'>
-					The open source URL shortener. If you need help setting Redirx up
-					please visit the
+				<ThemedText type='subtitle'>The open source URL shortener.</ThemedText>
+				<ThemedText type='default'>
+					If you need help setting Redirx up please visit the{' '}
 					<Link
 						href='https://github.com/clarkhacks/Redirx-Android'
 						style={styles.link}
@@ -102,7 +102,6 @@ export default function App() {
 				</ThemedText>
 			</ThemedView>
 
-			{/* Step 1: Enter Cloudflare Worker URL */}
 			<ThemedView style={styles.stepContainer}>
 				<ThemedText type='subtitle'>
 					Step 1: Enter your Cloudflare Worker URL
