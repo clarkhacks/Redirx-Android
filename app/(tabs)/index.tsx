@@ -5,6 +5,7 @@ import { useShareIntent } from 'expo-share-intent';
 import Toast from 'react-native-toast-message';
 import { useAdmin, AdminContextType } from '@/components/AdminContext';
 import { useRouter } from 'expo-router';
+import { Link } from 'expo-router';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -89,7 +90,13 @@ export default function App() {
 		>
 			<ThemedView style={styles.titleContainer}>
 				<ThemedText type='title'>Welcome to Redirx,</ThemedText>
-				<ThemedText type='subtitle'>The open source URL shortener.</ThemedText>
+				<ThemedText type='subtitle'>
+					The open source URL shortener. If you need help setting Redirx up
+					please visit the
+					<Link href='https://github.com/clarkhacks/Redirx-Android'>
+						Github Repo
+					</Link>
+				</ThemedText>
 			</ThemedView>
 
 			{/* Step 1: Enter Cloudflare Worker URL */}
