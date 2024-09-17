@@ -16,6 +16,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 export default function App() {
 	const { hasShareIntent, shareIntent, resetShareIntent, error } =
 		useShareIntent({
+			debug: true,
 			resetOnBackground: true,
 		});
 	const { isAdminEnabled, toggleAdminStatus } = useAdmin() as AdminContextType;
